@@ -150,7 +150,7 @@ function main(args) {
 if (require.main === module) {
     var kwargs = {
         name: "twitter-autoremove",
-        version: "twitter-autoremove 0.0.1"
+        version: "twitter-autoremove 0.1.1"
     };
     var args = docopt.docopt(doc, kwargs);
     main(args);
