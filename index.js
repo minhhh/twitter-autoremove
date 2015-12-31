@@ -118,9 +118,6 @@ function main(args) {
                                 _next();
                                 return;
                             }
-                            console.log(info.screen_name);
-                            __next();
-                            return;
                             client.post('friendships/destroy', {
                                 user_id: info.id
                             }, function(__error, __res) {
@@ -150,7 +147,7 @@ function main(args) {
 if (require.main === module) {
     var kwargs = {
         name: "twitter-autoremove",
-        version: "twitter-autoremove 0.1.1"
+        version: "twitter-autoremove 0.1.2"
     };
     var args = docopt.docopt(doc, kwargs);
     main(args);
