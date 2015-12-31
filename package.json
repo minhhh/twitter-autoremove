@@ -1,0 +1,38 @@
+{
+  "name": "twitter-autoremove",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "Ha.Minh",
+  "description": "Autoremove unwanted twitter friends.",
+  "contributors": [],
+  "bin": {
+    "twitter-autoremove": "./index.js"
+  },
+  "scripts": {
+    "test": "twitter-autoremove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minhhh/twitter-autoremove.git"
+  },
+  "keywords": [
+    "cli",
+    "twitter",
+    "autoremove"
+  ],
+  "dependencies": {
+    "async": "^1.5.0",
+    "docopt": "^0.6.2",
+    "line-reader": "^0.3.0",
+    "lodash": "^3.10.1",
+    "parse-int": "^1.0.0",
+    "twitter": "^1.2.5"
+  },
+  "analyze": false,
+  "devDependencies": {},
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}
+
