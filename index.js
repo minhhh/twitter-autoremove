@@ -138,7 +138,7 @@ function main(args) {
         }],
     }, function(err, res) {
         if (err) {
-            console.log("Error: " + JSON.stringify(err));
+            process.stderr.write("Error: " + JSON.stringify(err) + "\n");
             process.exit(1);
         }
     });
@@ -147,7 +147,7 @@ function main(args) {
 if (require.main === module) {
     var kwargs = {
         name: "twitter-autoremove",
-        version: "twitter-autoremove 0.1.2"
+        version: "twitter-autoremove 0.1.3"
     };
     var args = docopt.docopt(doc, kwargs);
     main(args);
