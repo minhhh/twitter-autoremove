@@ -25,7 +25,7 @@ npm install -g twitter-autoremove
     Options:
         -e EXCLUDE_LIST   List of friends who will not be removed.
         -d DELAY          Delay between removal in seconds. Set this
-                          carefully to avoid twitter API limit. [default: 150].
+                          carefully to avoid twitter API limit. [default: 100].
         -f                Remove friends who are also followers.
                           Default to false. [default: false].
         -i                Output id instead of screen name [default: false]

@@ -128,7 +128,7 @@ function main(args) {
                                 if (args['-i']) {
                                     console.log(__res.id);
                                 } else console.log(__res.screen_name);
-                                process.stderr.write("Removed " + __res.screen_name + ' ' + __res.id);
+                                process.stderr.write("Removed " + __res.screen_name + ' ' + __res.id + "\n");
                                 setTimeout(__next, DELAY * 1000);
                             });
                         }
@@ -148,7 +148,7 @@ function main(args) {
 if (require.main === module) {
     var kwargs = {
         name: "twitter-autoremove",
-        version: "twitter-autoremove 0.1.5"
+        version: "twitter-autoremove 0.1.6"
     };
     var args = docopt.docopt(doc, kwargs);
     main(args);
