@@ -18,7 +18,7 @@ TWITTER_ACCESS_TOKEN_KEY=xxx TWITTER_ACCESS_TOKEN_SECRET=xxx twitter-autoremove\
 Options:\n\
     -e EXCLUDE_LIST   List of friends who will not be removed.\n\
     -d DELAY          Delay between removal in seconds. Set this\n\
-                      carefully to avoid twitter API limit. [default: 150].\n\
+                      carefully to avoid twitter API limit. [default: 100].\n\
     -f                Remove friends who are also followers.\n\
                       Default to false. [default: false].\n\
     -i                Output id instead of screen name [default: false]\n\
@@ -43,7 +43,7 @@ var client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
-var DELAY = 150;
+var DELAY = 100;
 
 function main(args) {
     async.auto({
@@ -128,6 +128,7 @@ function main(args) {
                                 if (args['-i']) {
                                     console.log(__res.id);
                                 } else console.log(__res.screen_name);
+                                process.stderr.write("DELAY " + DELAY);
                                 setTimeout(__next, DELAY * 1000);
                             });
                         }
@@ -147,7 +148,7 @@ function main(args) {
 if (require.main === module) {
     var kwargs = {
         name: "twitter-autoremove",
-        version: "twitter-autoremove 0.1.3"
+        version: "twitter-autoremove 0.1.4"
     };
     var args = docopt.docopt(doc, kwargs);
     main(args);
